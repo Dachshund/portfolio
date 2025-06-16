@@ -1,0 +1,12 @@
+:root {
+    --main-font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 21px;
+    font-family: var(--main-font);
+}
+
+h1 {
+    font-size: 48px;
+}
