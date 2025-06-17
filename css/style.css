@@ -3,8 +3,10 @@
 }
 
 body {
+    margin: 0;
     font-size: 21px;
     font-family: var(--main-font);
+    background-color: #F1FFEE;
 }
 
 header {
@@ -13,6 +15,60 @@ header {
 
 h1 {
     font-size: 48px;
+    font-weight: 700;
     text-align: center;
-    color: seagreen;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fefae0;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #F1FFEE;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+header {
+    color: #31572C;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.experiences {
+    background-color: #132a13;
+    display: flex;
+    justify-content: center;
+    padding: 300px 0;
+    gap: 20px;
+}
+
+.experience {
+    text-align: center;
+    width: 100%;
+    border: #bc6c25 3px solid;
+    padding: 20px 0;
+    background-color: #dda15e;
+    transition: all 0.5s ease 0.1s;
+}
+
+.experience:hover {
+    background-color:#bc6c25;
+    color: #31572C;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.experience-link {
+    text-decoration: none;
+    display: block; 
+    color: inherit;
+    width: 620px;
 }
