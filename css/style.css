@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-size: 21px;
     font-family: var(--main-font);
-    background-color: #F1FFEE;
+    background-color: #3B6255;
 }
 
 header {
@@ -22,7 +22,7 @@ h1 {
 h3 {
     font-size: 26px;
     font-weight: 500;
-    color: #fefae0;
+    color: #F1FFEE;
 }
 
 h2 {
@@ -34,41 +34,56 @@ h2 {
 h4 {
     font-size: 26px;
     font-weight: 500;
+    color: #F1FFEE;
 }
 
 header {
-    color: #31572C;
+    color: #3B6255;
     text-align: center;
     margin: 50px auto;
 }
 
 .experiences {
-    background-color: #132a13;
+    background-color: #AAC1B1;
     display: flex;
     justify-content: center;
-    padding: 300px 0;
+    align-items: center;
+    padding: 200px 0;
     gap: 20px;
 }
 
 .experience {
     text-align: center;
     width: 100%;
-    border: #bc6c25 3px solid;
+    /* border: #AA996C 3px solid; */
     padding: 20px 0;
-    background-color: #dda15e;
+    background-color: #d2c49e;
     transition: all 0.5s ease 0.1s;
 }
 
 .experience:hover {
-    background-color:#bc6c25;
+    background-color:#AA996C;
     color: #31572C;
     transform: scale(1.02);
     cursor: pointer;
 }
 
 .experience-link {
-    text-decoration: none;
-    display: block; 
-    color: inherit;
+    display: block;
     width: 620px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.experience:hover h2,
+.experience:hover h3 {
+    color: #3B6255;
+}
+
+.experience h2,
+.experience h3 {
+    transition: all 0.5s ease 0.1s;
 }
