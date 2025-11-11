@@ -1,13 +1,50 @@
 :root {
     --main-font: 'Montserrat', sans-serif;
+    --main-text-color: #F1FFEE;
+    --background-color: #2b4d33;
+    --accent-color: #c2af7b;
 }
 
-body {
-    margin: 0;
-    font-size: 21px;
-    font-family: var(--main-font);
-    background-color: #3B6255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Typography */
+
+body {
+    font-size: 16px;
+    font-family: var(--main-font);
+    color: var(--main-text-color);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+strong {
+    font-weight: 550;
+}
+
+
+/* HeaDer */
 
 header {
     height: 100vh;
@@ -18,6 +55,7 @@ header {
     justify-content: center;
     overflow: hidden;
     position: relative;
+    background-color: var(--background-color);
 }
 
 .bg-video {
@@ -32,66 +70,70 @@ header {
     z-index: 0;
 }
 
-
-.header-content {
-    text-align: center;
-    color: #F1FFEE;
-    z-index: 1;
-}
-
-h1 {
+.title {
     margin: 0;
     font-size: 8rem;
     font-weight: 700;
-    color: #F1FFEE;
 }
 
-h3 {
-    font-size: 26px;
-    font-weight: 500;
-    color: #F1FFEE;
+.subtitle {
+    margin: -0.15em;
+    font-size: 1.2rem;
+    font-weight: 550;
 }
 
-h2 {
-    font-size: 32px;
-    font-weight: 500;
-    color: #F1FFEE;
+.header-content {
+    text-align: center;
+    transform: translateY(-18%);
+    z-index: 1;
 }
 
-h4 {
-    font-size: 26px;
-    font-weight: 500;
-    color: #F1FFEE;
+/* Professional Experience */
+
+.section {
+    background-color: var(--background-color);
+    padding: 6em 0;
 }
 
-.experiences {
-    background-color: #AAC1B1;
+.professional-experience {
+    position: relative;
+}
+
+.experience-title {
+    text-align: center;
+}
+
+.experience-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 200px 0;
-    gap: 20px;
+    padding: 2em 0;
+    gap: 0.8em;
 }
 
-.experience {
-    text-align: center;
-    width: 100%;
-    /* border: #AA996C 3px solid; */
-    padding: 20px 0;
-    background-color: #d2c49e;
-    transition: all 0.5s ease 0.1s;
-}
-
-.experience:hover {
-    background-color:#AA996C;
-    color: #31572C;
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-.experience-link {
+.experience-button {
+    background-color: #3a913c;
     display: block;
-    width: 620px;
+    width: 700px;
+    text-align: center;
+    /* border: #AA996C 3px solid; */
+    transition: all 0.4s ease 0.05s;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-button p {
+    margin: 0.8em;
+}
+
+.experience-button:hover,
+.experience-button:focus-visible {
+    background-color:var(--accent-color);
+    color: var(--background-color);
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 a {
@@ -99,12 +141,50 @@ a {
     color: inherit;
 }
 
-.experience:hover h2,
-.experience:hover h3 {
-    color: #3B6255;
+.professional-experience::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 0 auto;
 }
 
-.experience h2,
-.experience h3 {
-    transition: all 0.5s ease 0.1s;
+
+/* Skills */
+
+.skills-title {
+    text-align: center;
+}
+
+.skills-wrapper {
+    overflow: hidden;
+    display: flex;
+    gap: 0.25em;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 0.25em;
+    white-space: nowrap;
+    list-style: none;
+    animation: slide-left 20s infinite linear;
+}
+
+.skills-list li {
+    flex: 0 0 auto;
+    padding: 1em;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@keyframes slide-left {
+    from { translate: 0; }
+    to { translate: -100%; }
 }
