@@ -93,9 +93,6 @@ header {
 .section {
     background-color: var(--background-color);
     padding: 6em 0;
-}
-
-.professional-experience {
     position: relative;
 }
 
@@ -141,7 +138,7 @@ a {
     color: inherit;
 }
 
-.professional-experience::after {
+.section:not(:last-of-type)::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -158,6 +155,7 @@ a {
 
 .skills-title {
     text-align: center;
+    padding-bottom: 0.25em;
 }
 
 .skills-wrapper {
@@ -187,4 +185,43 @@ a {
 @keyframes slide-left {
     from { translate: 0; }
     to { translate: -100%; }
+}
+
+/* Projects */
+
+.projects-title {
+    padding-left: 4.4em;
+    padding-bottom: 0.5em;
+}
+
+.projects-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-columns: 300px;
+    grid-auto-rows: 300px;
+    gap: 1em;
+    grid-template-areas: 
+    "box1 box1 box2"
+    "box3 box4 box4";
+}
+
+.card {
+    background-color: var(--accent-color);
+    border-radius: 0.8em;
+    overflow: hidden;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease 0.05s;
+}
+
+.card:hover img,
+.card:focus-visible img {
+    transform: scale(1.1);
+    cursor: pointer;
 }
